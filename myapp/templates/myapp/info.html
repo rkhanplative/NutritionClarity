@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Nutritional Clarity</title>
+    <link href="https://fonts.googleapis.com/css?family=Merriweather|Open+Sans&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Cairo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Material+Icons" rel="stylesheet">
+    <style>
+      h1{
+        font-family:'Cairo';
+        color:#000004;
+        font-size:1200%
+        font-weight:bold;
+        margin-left:1%;
+      }
+      p{
+        font-family:'Montserrat';
+        color:#000000;
+        font-size:150%;
+        margin-left:2%;
+        margin-right:2%;
+
+      }
+      body{
+        background-color:#white;
+        color:white;
+        margin:0;
+      }
+      .box{
+        border-radius:3%;
+      }
+      .box:hover{
+        font-size:150%;
+        transition-duration: 3s;
+      }
+      .topHead{
+        font-family:Cairo;
+        color:white;
+        height:200%;
+      }
+      .topBar{
+        width:100%;
+        border-radius:0px 0% 10% 10%;
+        height:10%;
+        background-color:#262626;
+        height:10%;
+        font-size:400%;
+        padding:3%;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class='topBar'<h1 class = "topHead">Nutritional Clarity</h1></div>
+    {% for h in headers %}{% for p in paragraphs %}
+    {% if forloop.counter == forloop.parentloop.counter %}
+    <div class = 'box'>
+        <h1>{{h}}</h1>
+        <p>{{p}}</p>
+        <br>
+        <hr style = 'margin-left:5%;margin-right:5%;'>
+        <br>
+    </div>
+    {% endif %}
+    {% endfor %}{% endfor %}
+  </div>
+    <br>
+  </body>
+</html>
